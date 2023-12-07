@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+:root {
+	--app-background-color: #6000C0B0;
+	--app-color-1: #6000C0;
+	--app-color-1-hover: #8000ff;
+
+
+	--app-font-color: #ffffff;
+
+	--app-button-height: 40px;
+
+	color: var(--app-font-color);
+}
+
+.background {
+	z-index: -1;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	/* https://pixabay.com/photos/background-low-poly-geometric-4168284/ */
+	background-image:
+		linear-gradient(#00000040, var(--app-background-color)),
+		url("../img/background-4168284_640.jpg");
+}
+
+main {
+	width: 100vw;
+	min-height: 100vh;
+}
