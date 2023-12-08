@@ -12,3 +12,7 @@ function hideClass(className) {
 function toggleClass(className) {
 	[...document.getElementsByClassName(className)].forEach(e=>{e.classList.toggle("show")});
 }
+
+function innerHTMLClass(className, innerHTML) {
+	[...document.getElementsByClassName(className)].forEach(e=>{e.innerHTML = innerHTML});
+}

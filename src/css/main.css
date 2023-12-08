@@ -145,11 +145,12 @@ button .bx-revision { /* Strange icon */
 	font-size: 32px;
 	
 	height: 32px;
-	width: 60px;
+	width: 90px;
 }
 
 .level-errors {
 	color: #ff0000;
+	text-align: left;;
 }
 
 .level-errors span {
@@ -162,12 +163,20 @@ button .bx-revision { /* Strange icon */
 	font-size: 40px;
 }
 
+.level-time {
+	text-align: right;
+}
+
 .error-count, .time-remaining{
 	font-weight: 700;
 }
 
-.level p {
+.level {
 	text-align: center;
+}
+
+.level p {
+	text-align: inherit;
 }
 
 .current-word {
