@@ -11,7 +11,7 @@
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,500;6..12,600;6..12,700&display=swap" rel="stylesheet">
 
 	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
@@ -25,31 +25,70 @@
 	</div>
 	<main>
 		<!-- Main menu -->
-		<div class="main-menu fill flex-vertical hide show">
+		<div class="main-menu menu hide">
 			<div class="flex-vertical center">
 				<h1>Game Name</h1>
-				<button class="wide-button">Play</button>
-				<button class="wide-button">High-Scores</button>
-				<button class="wide-button">Settings</button>
+				<button class="button-play wide-button">Play</button>
+				<button class="button-highscores wide-button">High-Scores</button>
+				<button class="button-settings wide-button">Settings</button>
 				</div>
 		</div>
 		<!-- Level select (upcoming) -->
-		<div class="level-menu hide">
-
+		<div class="level-menu menu hide">
+			<div class="flex-vertical center">
+				<h1>Select Level</h1>
+				<button class="button-mainmenu back-button"><i class='bx bx-arrow-back'></i>back</button>s
+			</div>
 		</div>
 		<!-- Level overview -->
-		<div class="level-overview-menu hide">
-
+		<div class="level-overview-menu menu hide">
+			<div class="flex-vertical center">
+				<h1 class="level-name"></h1>
+				<button class="button-play back-button"><i class='bx bx-arrow-back'></i>back</button>
+			</div>
 		</div>
 		<!-- High scores (upcoming) -->
-		<div class="score-menu hide">
-
+		<div class="score-menu menu hide">
+			<div class="flex-vertical center">
+				<h1>High Scores</h1>
+				<button class="button-mainmenu back-button"><i class='bx bx-arrow-back'></i>back</button>
+			</div>
+		</div>
+		<!-- Settings (upcoming) -->
+		<div class="settings-menu menu hide">
+			<div class="flex-vertical center">
+				<h1>Settings</h1>
+				<button class="button-mainmenu back-button"><i class='bx bx-arrow-back'></i>back</button>
+			</div>
 		</div>
 		<!-- In game -->
-		<div class="level hide">
-
+		<div class="level menu hide">
+			<div class="flex-vertical center">
+				<div class="level-header flex">
+					<div class="level-errors invisible">
+						<p><i class='bx bx-x'></i><span class="error-count">4</span></p>
+					</div>
+					<h1 class="level-name">Level Name</h1>
+					<div class="level-time">
+						<p><span class="time-remaining">4</span><i class='bx bxs-time-five'></i></p>
+						
+					</div>
+				</div>
+				<p class="current-word">pneumonoultramicroscopicsilicovolcanoconiosis</p>
+				<p class="next-word">polytetrafluoroethylene</p>
+				<input type="text" class="text-input">
+				<p class="tip invisible show">Start typing to begin</p>
+				<div class="menurestart-buttons flex">
+					<button class="button-quitlevel back-button"><i class='bx bx-arrow-back'></i>&ThickSpace; main menu</button>
+					<button class="button-restartlevel restart-button"><i class='bx bx-revision'></i>Restart</button>
+				</div>
+			</div>
 		</div>
 
 	</main>
+	<!-- not really a footer but instead elements locked to the bottom of the screen -->
+	<footer class="flex">
+		<p class="ehren-strifling">&copy;2023 Ehren Strifling</p>
+	</footer>
 </body>
 </html>

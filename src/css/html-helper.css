@@ -2,7 +2,14 @@
 
 .hide {
 	visibility: hidden;
+	display: none;
 }
+
+.invisible {
+	visibility: hidden;
+}
+
 .show {
-	visibility: visible;
+	visibility: inherit;
+	display: block;
 }

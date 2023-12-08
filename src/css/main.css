@@ -5,12 +5,19 @@
 	--app-color-1: #6000C0;
 	--app-color-1-hover: #8000ff;
 
+	--app-color-cancel: #606060;
+	--app-color-cancel-hover: #808080;
+
 
 	--app-font-color: #ffffff;
 
 	--app-button-height: 40px;
 
 	color: var(--app-font-color);
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	cursor:default;
 }
 
 .background {
@@ -31,7 +38,171 @@
 		url("../img/background-4168284_640.jpg");
 }
 
+body {
+	user-select: none;
+}
+
 main {
 	width: 100vw;
 	min-height: 100vh;
+}
+
+footer {
+	position: fixed;
+	width: 100%;
+	bottom:0px;
+}
+
+footer .ehren-strifling {
+	margin-top: auto;
+	margin-left: auto;
+	margin-right: 4px;
+	color: #ffffff00;
+	text-align: right;
+	transition: all 0.5s;
+}
+footer .ehren-strifling:hover {
+	color: #ffffff80;
+}
+
+/* Base button styles */
+button {
+	display: block;
+	width: 200px;
+	height: var(--app-button-height);
+	border-radius: 10px;
+
+	background-color: var(--app-color-1);
+
+	font-size: 28px;
+
+	/* Why are button base styles garbage? Both of these should be the default*/
+	color: inherit;
+	cursor: pointer;
+
+	transition: background-color 0.5s;
+
+	position: relative;
+}
+
+button:hover {
+	background-color: var(--app-color-1-hover);
+}
+
+button.back-button {
+	margin-right: auto;
+
+	background-color: var(--app-color-cancel);
+}
+
+button.back-button:hover {
+	background-color: var(--app-color-cancel-hover);
+}
+
+button .bx {
+	line-height: var(--app-button-height);
+	position: absolute;
+	left: 4px;
+}
+
+button .bx-revision { /* Strange icon */
+	line-height: calc(var(--app-button-height) - 4px);
+}
+/* Menus */
+
+.menu {
+	position: fixed;
+	top: 0px;
+	display: flex;
+	flex-direction: column;
+	width: 100vw;
+	min-height: 100vh;
+}
+
+.main-menu {
+	
+}
+
+.menu h1 {
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.wide-button {
+	width: 400px;
+	margin-top: 20px;
+	margin-inline: auto;
+}
+
+/* Levels */
+
+.level-name {
+	margin-inline: auto;
+	margin: auto;
+}
+
+.level-errors, .level-time {
+	font-size: 32px;
+	
+	height: 32px;
+	width: 60px;
+}
+
+.level-errors {
+	color: #ff0000;
+}
+
+.level-errors span {
+	position: relative;
+	top: -4px;
+	left: -4px;
+}
+
+.level-errors .bx {
+	font-size: 40px;
+}
+
+.error-count, .time-remaining{
+	font-weight: 700;
+}
+
+.level p {
+	text-align: center;
+}
+
+.current-word {
+	font-size: 28px;
+}
+.next-word {
+	opacity: 50%;
+}
+
+
+input.text-input {
+	margin-top: 20px;
+	display: block;
+	margin-inline: auto;
+	text-align: center;
+	/* large enough to fit pneumonoultramicroscopicsilicovolcanoconiosis.
+	Which is a word that will be in the game if I develop it enough. */
+	/* But it looks stupid having such a long input. I'll just expand it during a level if it is needed. */
+	/* width: 620px; */
+	height: var(--app-button-height);
+	border-radius: 10px;
+
+	background-color: #ffffff;
+	border: 2px solid var(--app-color-1);
+
+	font-size: 28px;
+	user-select: text;
+}
+
+.restart-button {
+	margin-left: auto;
+}
+
+.menurestart-buttons {
+	margin-top:80px;
+	margin-inline: auto;
+	width: 620px;
 }
