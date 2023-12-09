@@ -353,6 +353,29 @@ function saveSettings() {
 }
 
 function addEventListeners() {
+	function deleteData(e) {
+		let element = (e.target.tagName==="span") ? e.target : e.target.parentElement;
+		element.disabled = true;
+			element.querySelector("span").innerHTML = "Are you sure?";
+			setTimeout(()=>{
+				element.disabled = false;
+				element.removeEventListener("click", deleteData);
+				element.addEventListener("click", deleteDataCertain);
+				setTimeout(()=>{
+					element.querySelector("span").innerHTML = "Delete all data";
+					element.removeEventListener("click", deleteDataCertain);
+					element.addEventListener("click", deleteData);
+				}, 10000);
+			}, 5000);
+	}
+	function deleteDataCertain(e) {
+		let element = (e.target.tagName==="span") ? e.target : e.target.parentElement;
+		localStorage.removeItem("saveData");
+		loadSaveData();
+		element.querySelector("span").innerHTML = "Data deleted";
+		console.log("data deleted");
+	}
+
 	[...document.getElementsByClassName("button-play")].forEach(element=>{
 		element.addEventListener("click", e=>{
 			levelManager.loadLevel(levels[0]);
@@ -371,6 +394,9 @@ function addEventListeners() {
 		element.addEventListener("click", e=>{
 			loadSection("settings-menu");
 		});
+	});
+	[...document.getElementsByClassName("button-delete-data")].forEach(element=>{
+		element.addEventListener("click", deleteData);
 	});
 	[...document.getElementsByClassName("button-mainmenu")].forEach(element=>{
 		element.addEventListener("click", e=>{
