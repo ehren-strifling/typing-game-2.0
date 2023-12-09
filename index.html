@@ -37,7 +37,7 @@
 		<div class="level-menu menu hide">
 			<div class="flex-vertical center">
 				<h1>Select Level</h1>
-				<button class="button-mainmenu back-button"><i class='bx bx-arrow-back'></i>back</button>s
+				<button class="button-mainmenu back-button"><i class='bx bx-arrow-back'></i>back</button>
 			</div>
 		</div>
 		<!-- Level overview -->
@@ -51,6 +51,103 @@
 		<div class="score-menu menu hide">
 			<div class="flex-vertical center">
 				<h1>High Scores</h1>
+				<button class="button-mainmenu back-button"><i class='bx bx-arrow-back'></i>back</button>
+			</div>
+		</div>
+		<!-- High score (single level) -->
+		<div class="level-score-menu menu hide">
+			<div class="flex-vertical center">
+				<h1>High Scores: <span class="level-name"></span></h1>
+				<table class="level-score-table score-table">
+					<tr>
+						<th></th>
+						<th>Date</th>
+						<th>Score</th>
+						<th>Words</th>
+						<th>Time left</th>
+						<th>Errors</th>
+					</tr>
+					<tr class="gold">
+						<td>#1</td>
+						<td class="scoreboard-date">--/--/---</td>
+						<td class="scoreboard-score">---</td>
+						<td class="scoreboard-words">---/---</td>
+						<td class="scoreboard-time">---</td>
+						<td class="scoreboard-errors">---</td>
+					</tr>
+					<tr class="silver">
+						<td>#2</td>
+						<td class="scoreboard-date">--/--/---</td>
+						<td class="scoreboard-score">---</td>
+						<td class="scoreboard-words">---/---</td>
+						<td class="scoreboard-time">---</td>
+						<td class="scoreboard-errors">---</td>
+					</tr>
+					<tr class="bronze">
+						<td>#3</td>
+						<td class="scoreboard-date">--/--/---</td>
+						<td class="scoreboard-score">---</td>
+						<td class="scoreboard-words">---/---</td>
+						<td class="scoreboard-time">---</td>
+						<td class="scoreboard-errors">---</td>
+					</tr>
+					<tr>
+						<td>#4</td>
+						<td class="scoreboard-date">--/--/---</td>
+						<td class="scoreboard-score">---</td>
+						<td class="scoreboard-words">---/---</td>
+						<td class="scoreboard-time">---</td>
+						<td class="scoreboard-errors">---</td>
+					</tr>
+					<tr>
+						<td>#5</td>
+						<td class="scoreboard-date">--/--/---</td>
+						<td class="scoreboard-score">---</td>
+						<td class="scoreboard-words">---/---</td>
+						<td class="scoreboard-time">---</td>
+						<td class="scoreboard-errors">---</td>
+					</tr>
+					<tr>
+						<td>#6</td>
+						<td class="scoreboard-date">--/--/---</td>
+						<td class="scoreboard-score">---</td>
+						<td class="scoreboard-words">---/---</td>
+						<td class="scoreboard-time">---</td>
+						<td class="scoreboard-errors">---</td>
+					</tr>
+					<tr>
+						<td>#7</td>
+						<td class="scoreboard-date">--/--/---</td>
+						<td class="scoreboard-score">---</td>
+						<td class="scoreboard-words">---/---</td>
+						<td class="scoreboard-time">---</td>
+						<td class="scoreboard-errors">---</td>
+					</tr>
+					<tr>
+						<td>#8</td>
+						<td class="scoreboard-date">--/--/---</td>
+						<td class="scoreboard-score">---</td>
+						<td class="scoreboard-words">---/---</td>
+						<td class="scoreboard-time">---</td>
+						<td class="scoreboard-errors">---</td>
+					</tr>
+					<tr>
+						<td>#9</td>
+						<td class="scoreboard-date">--/--/---</td>
+						<td class="scoreboard-score">---</td>
+						<td class="scoreboard-words">---/---</td>
+						<td class="scoreboard-time">---</td>
+						<td class="scoreboard-errors">---</td>
+					</tr>
+					<tr>
+						<td>#10</td>
+						<td class="scoreboard-date">--/--/---</td>
+						<td class="scoreboard-score">---</td>
+						<td class="scoreboard-words">---/---</td>
+						<td class="scoreboard-time">---</td>
+						<td class="scoreboard-errors">---</td>
+					</tr>
+				</table>
 				<button class="button-mainmenu back-button"><i class='bx bx-arrow-back'></i>back</button>
 			</div>
 		</div>
@@ -68,16 +165,17 @@
 					<div class="level-errors invisible">
 						<p><i class='bx bx-x'></i><span class="error-count">4</span></p>
 					</div>
-					<h1 class="level-name">Level Name</h1>
+					<h1 class="level-name">Invalid Level</h1>
 					<div class="level-time">
 						<p><span class="time-remaining">4</span><i class='bx bxs-time-five'></i></p>
 						
 					</div>
 				</div>
-				<p class="current-word">pneumonoultramicroscopicsilicovolcanoconiosis</p>
-				<p class="next-word">polytetrafluoroethylene</p>
-				<input type="text" class="text-input">
-				<p class="tip invisible show">Start typing to begin</p>
+				<p class="current-word"></p>
+				<p class="next-word"></p>
+				<input type="text" class="text-input" tabindex="1">
+				<p class="tip invisible">Start typing to begin</p>
+				<p class="unlock-text invisible">New Highscore!</p>
 				<div class="menurestart-buttons flex">
 					<button class="button-quitlevel back-button"><i class='bx bx-arrow-back'></i>&ThickSpace; main menu</button>
 					<button class="button-restart restart-button"><i class='bx bx-revision'></i>Restart</button>

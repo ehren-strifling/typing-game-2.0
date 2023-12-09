@@ -180,12 +180,14 @@ button .bx-revision { /* Strange icon */
 }
 
 .current-word {
+	margin-top: 20px;
+	height: 40px;
 	font-size: 28px;
 }
 .next-word {
+	height: 24px;
 	opacity: 50%;
 }
-
 
 input.text-input {
 	margin-top: 20px;
@@ -206,12 +208,63 @@ input.text-input {
 	user-select: text;
 }
 
+input.text-input:disabled {
+	background-color: #ffffff80;
+}
+
+.unlock-text {
+	margin-top: 20px;
+	height: 40px;
+	font-size: 32px;
+
+	animation: blink 250ms infinite;
+	
+}
+@keyframes blink {50% { color: #ffff00; }}
+.menurestart-buttons {
+	margin-top:60px;
+	margin-inline: auto;
+	width: 620px;
+}
+
 .restart-button {
 	margin-left: auto;
 }
 
-.menurestart-buttons {
-	margin-top:80px;
-	margin-inline: auto;
-	width: 620px;
+.level-score-menu button.back-button {
+	position: relative;
+	left: -32px;
+	margin-top: 32px;
+}
+
+table.score-table tr {
+	position: relative;
+}
+
+table.score-table tr:first-child th {
+	padding-bottom:12px;
+}
+
+table.score-table tr td {
+	text-align: center;
+}
+
+table.level-score-table tr :first-child {
+	position: absolute;
+	left: -32px;
+	width: 0px;
+	position: absolute;
+	color: #D0D0D0;
+}
+
+table.level-score-table tr.gold :first-child {
+	color: #d4af37;
+}
+
+table.level-score-table tr.silver :first-child {
+	color: #bcc6cc;
+}
+
+table.level-score-table tr.bronze :first-child {
+	color: #b08d57;
 }
